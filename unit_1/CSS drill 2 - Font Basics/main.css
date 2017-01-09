@@ -1,0 +1,16 @@
+main {
+  padding: 30px;
+}
+
+h1, h2 {
+  font-family: 'Lato';
+}
+
+p {
+  font-family: 'Arima Madurai';
+}
+
+hr {
+  width: 50%;
+  margin-left: 0;
+}

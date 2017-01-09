@@ -1,0 +1,40 @@
+* {
+  color: white;
+  font-family: 'Lato';
+}
+/*.transparent{
+  background: linear-gradient(
+      rgba(255, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.60)
+    );
+  background-size: contain;
+}
+*/
+.main {
+  padding: 60px;
+  height: 300px;
+   
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.60)
+    ),
+    
+    url('https://tf-assets-prod.s3.amazonaws.com/tf-curric/FEWD-001/light-background.jpg');
+	background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.opacity-layer {
+  padding: 60px;
+}
+.inner {
+  background-color: black;
+  height: 100%
+    
+}
+
+hr {
+  width: 150px;
+  margin-left: 0;
+  color:  white;
+}

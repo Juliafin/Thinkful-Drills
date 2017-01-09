@@ -1,0 +1,19 @@
+main {
+  padding: 60px;
+  border: 1px solid;
+}
+
+.bluebox{
+  background-color: blue;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 100px;
+}
+  
+.redbox{
+	background-color: red;
+  width: 198px;
+  height: 248px;
+  border: 1px solid black
+}
+    

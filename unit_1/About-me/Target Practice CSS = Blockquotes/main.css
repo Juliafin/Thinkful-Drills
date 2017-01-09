@@ -1,0 +1,38 @@
+main {
+  padding: 30px;
+}
+
+blockquote {
+  max-width: 300px;
+}
+
+blockquote + .author {
+  margin-bottom: 60px;
+}
+
+.author {
+  color: grey;
+}
+
+blockquote::before{
+  content: open-quote;
+  font-size: 50px;
+  font-family: 'Helvetica';
+  color: green;
+  font-style: Bold;
+  
+  
+}
+
+blockquote::after { 
+content: close-quote;
+  font-size: 50px;
+  font-family: 'Helvetica';
+  color: red;
+  font-style: Bold;
+}
+
+.author::before{
+  content: "-  ";
+ 
+}

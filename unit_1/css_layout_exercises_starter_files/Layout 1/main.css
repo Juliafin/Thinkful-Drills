@@ -1,0 +1,53 @@
+* {
+	box-sizing: border-box;
+}
+
+main {
+	height: 500px;
+	width: 800px;
+	border: 1px solid black;
+	font-size: 0;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.topbox{
+	display: inline-block;
+	font-size: 0;
+	border: 1px solid black;
+	width: 50%;
+	height: 40%;
+}
+
+.bottombox{
+	display: inline-block;
+	font-size: 0;
+	border: 1px solid black;
+	width: 33.33%;
+	height: 300px;
+}
+
+.greenbox {
+	background-color: green;
+	
+}
+
+.bluebox {
+	background-color: blue;
+	
+}
+
+.greybox{
+	background-color: grey;
+
+}
+
+.blackbox{
+	background-color: black;
+
+}
+
+.orangebox{
+	background-color: orange;
+}
