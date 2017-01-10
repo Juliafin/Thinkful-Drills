@@ -1,3 +1,4 @@
+
 * {
 	box-sizing: border-box;
 }
@@ -30,12 +31,12 @@ main {
 
 .greenbox {
 	background-color: green;
-	
+
 }
 
 .bluebox {
 	background-color: blue;
-	
+
 }
 
 .greybox{

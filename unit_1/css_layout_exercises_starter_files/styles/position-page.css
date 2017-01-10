@@ -2,10 +2,10 @@ nav {
 	padding-left: 60px;
 	padding-right: 60px;
 	width: 100%;
-	background-color: grey;
+	background-color: red;
 	position: fixed;
 	height: 50px;
-	
+
 
 }
 
@@ -33,8 +33,7 @@ nav li::after{
 }
 
 div{
-	width: 100%;
-	height: 100%;
+
 }
 div.bgimage{
 	background-image: url("../images/outerspace_landscape.jpeg");
@@ -48,8 +47,8 @@ div.bgimage{
 
 .dogcatbox {
 	position: fixed;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 25%;
+	margin-right: 25%;
 	margin-top: 100px;
 	display: block;
 	width: 600px;
@@ -58,25 +57,25 @@ div.bgimage{
 	text-align: center;
 }
 
-.cat, .dog{
+.cat, .dog {
 	width: 200px;
 	height: 200px;
-	
+
 	position: absolute;
-	
-	
+
+
 }
 
 .dog{
-	
+
 	background-image: url("../images/spacedog.png");
 	bottom: -120px;
 	right: -90px;
 
-}	
+}
 
 .cat{
-	
+
 	background-image: url("../images/spacecat.png");
 	top: -30px;
 	left: -40px;

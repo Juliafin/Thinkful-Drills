@@ -10,3 +10,22 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+
+.nebula1{
+      width: 300px;
+      height: 300px;
+      float: left;
+      margin-top: 18px;
+      margin-right: 70px;
+      margin-bottom: 10px;
+}
+
+.nebula2{
+  width: 300px;
+  height: 300px;
+  margin-left: 10px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  clear: left;
+  float: right;
+}
