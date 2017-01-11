@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    position: fixed;
+    height: 40px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: grey;
+    border-bottom: .5px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    text-align: right;
+}
+
+nav:hover {
+    background-color: green;
+}
+
+.logo {
+    position: fixed;
+    display: inline-block;
+    left: 15px;
+    top: 7px;
+}
+
+li {
+    display: inline;
+    position: relative;
+    list-style-type: none;
+    right: 100px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.container1 {
+    position: fixed;
+    border: 10px blue dotted;
+    width: 300px;
+    height: 300px;
+    left: 90px;
+    right: 30px;
+    top: 100px;
+}
+
+.container2 {
+    position: absolute;
+    border: 3px red solid;
+    width: 300px;
+    height: 100px;
+    top: 56px;
+}
+
+p {
+    font-size: 40px;
+}

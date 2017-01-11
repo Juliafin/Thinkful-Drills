@@ -1,0 +1,10 @@
+.image {
+  background-image: url(../css_layout_exercises_starter_files/images/nebula1.png);
+  border: 5px solid black
+  width: 100px;
+  height: 100px;
+  float: left;
+
+
+
+}

@@ -14,17 +14,18 @@ nav > img{
 	border-radius: 100px;
 	border: 1px solid black;
 	width: 40px;
-	height:40px;
+	height: 40px;
 	top: 4px;
 
 	}
 
 nav li{
-	text-align; left;
+	text-align: left;
 	position: relative;
 	display: inline-block;
 	margin-right: 5px;
 	margin-left: 5px;
+	right: 0px;
 }
 
 nav li::after{

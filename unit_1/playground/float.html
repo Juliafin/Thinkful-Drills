@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="float.css">
+    <title>
+    This is a float test
+  </title>
+  </head>
+  <body>
+<div class="container">
+
+
+<p> this example, we've set float: left; on the .left class, and applied that class to the three image elements.
+By doing so, we've taken the images out of the normal flow, and pushed them to the left. The paragraph text, which is in
+the normal flow, wraps to the right of the images. We've set the right margin on the images so there's a gap between each one,
+and a gap between the rightmost image and the text.
+
+Note that if we set float: right; instead, the images would move to the right of the page, and the text would wrap on the left.
+When you have more than one floated element, as we do in the example above, those elements will continue to horizontally
+stack next to one another, as long as there is space in the parent container. If there's not enough space, they'll go on to
+the next line (if you want to see this behavior, copy and paste the image element a couple more times in the Codepen above).
+
+For some layouts, you need to set the clear property in an element immediately following a floated element. Let's have a
+look at a problem case where this is necessary
+this example, we've set float: left; on the .left class, and applied that class to the three image elements.
+By doing so, we've taken the images out of the normal flow, and pushed them to the left. The paragraph text, which is in
+the normal flow, wraps to the right of the images. We've set the right margin on the images so there's a gap between each one,
+and a gap between the rightmost image and the text.
+
+
+</p>
+<div class="image">
+
+</div>
+
+<p>ote that if we set float: right; instead, the images would move to the right of the page, and the text would wrap on the left.
+When you have more than one floated element, as we do in the example above, those elements will continue to horizontally
+stack next to one another, as long as there is space in the parent container. If there's not enough space, they'll go on to
+the next line (if you want to see this behavior, copy and paste the image element a couple more times in the Codepen above).
+
+For some layouts, you need to set the clear property in an element immediately following a floated element. Let's have a
+look at a problem case where this is necessary:</p>
+</div>
+  </body>
+</html>
