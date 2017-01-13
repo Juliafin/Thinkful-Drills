@@ -9,12 +9,9 @@ nav {
     left: 0px;
     right: 0px;
     background: rgb(226, 228, 227);
-    border-bottom: .5px;
-    border-bottom-color: black;
-    border-bottom-style: solid;
+    border-bottom: 1px solid black;
     text-align: right;
     z-index: 2;
-    
 }
 
 nav:hover {
@@ -36,7 +33,7 @@ nav a:hover {
     color: purple;
 }
 
-nav>a {
+nav > a {
     margin-right: 10px;
 }
 
@@ -71,10 +68,8 @@ nav>a {
     width: 30px;
     border: 1px black solid;
     left: 400px;
-    background-image: url("magnifying-glass.png");
+    background: transparent url("magnifying-glass.png") top left no-repeat;
     background-size: 30px 30px;
-    background-position: center;
-    background-repeat: no-repeat;
     margin-left: 10px;
     box-shadow: 0 .5px #800;
 }
