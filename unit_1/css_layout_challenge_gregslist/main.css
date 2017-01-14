@@ -9,9 +9,7 @@ nav {
     left: 0px;
     right: 0px;
     background: grey;
-    border-bottom: .5px;
-    border-bottom-color: black;
-    border-bottom-style: solid;
+    border-bottom: solid 1px black;
     text-align: right;
 }
 
