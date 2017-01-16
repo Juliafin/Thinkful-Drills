@@ -1,0 +1,39 @@
+main {
+  padding-bottom: bottom: 30px;
+}
+
+main .row {
+    padding-bottom: bottom: 50px;
+}
+
+.box {
+    height: 200px;
+    text-align: center;
+    padding-top: 30px;
+    border: 1px solid black;
+
+}
+
+.black {
+    background-color: black;
+    color: white;
+}
+
+.red{
+  background-color: red;
+
+}
+
+.green{
+  background-color: green;
+
+}
+
+.pink{
+  background-color: pink;
+
+}
+
+.yellow{
+background-color: yellow;
+}
