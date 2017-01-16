@@ -61,9 +61,7 @@
   /* 4 columns */
   .col-4 {
     width: 33.3333%;
-    width: calc(100%/3px);
-
-
+    width: calc(100/3px%);
   }
 
   /* 6 columns */
@@ -76,3 +74,10 @@
     width: 100%;
   }
 }
+
+/* Stop grid expansion on 1000px, grid */
+@media only screen and (max-width: 1000px) {
+  /* 3 columns, 3/12 in % */
+  .col-3, .col-4, .col-6, .col-12{
+    max-width: 1000px;
+  }

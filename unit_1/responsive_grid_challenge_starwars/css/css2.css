@@ -1,14 +1,54 @@
-nav {
-  position: fixed;
-  display: block;
-  z-index: 2;
-  height: 40px;
+* {
+    font-family: ruboto, sans-serif;
+}
+
+.navbarbox {
+    height: 95px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: orange;
+    background-size: cover;
+    padding-top: 15px;
+}
+
+.navbarbox p {
+    margin-top: -12px;
+    font-size: 20px;
+}
+
+.navbarbox h1 {
+    margin-top: 0px;
+}
+
+header {
+    background-color: orange;
+    margin-bottom: 40px;
+}
+
+main .row {
+    margin-bottom: 20px;
+}
+
+.box {
+    height: 100%;
+    border: 1px rgb(135, 135, 135) solid;
+}
+
+
+img{
   width: 100%;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  background-color: orange;
-  background-size: cover;
-  background-position: center;
+
+
+}
+
+.carddescription{
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+.image1{
+  background-image: url("images/rey_square.png");
 
 }
