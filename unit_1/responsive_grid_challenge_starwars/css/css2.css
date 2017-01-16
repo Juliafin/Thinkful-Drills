@@ -3,13 +3,11 @@
 }
 
 .navbarbox {
-    height: 95px;
     top: 0px;
     left: 0px;
     right: 0px;
     width: 100%;
     background-color: orange;
-    background-size: cover;
     padding-top: 15px;
 }
 
@@ -25,6 +23,7 @@
 header {
     background-color: orange;
     margin-bottom: 40px;
+    word-wrap: break-word;
 }
 
 main .row {
