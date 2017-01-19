@@ -1,10 +1,13 @@
 // Function defined here
 
 function shouter (whatToShout) {
-  return whatToShout.toUpperCase() + "!!!";
-  console.log( '"'  + whatToShout.toUpperCase() + "!!!"
-+ '"');
+  var upperCaseString = whatToShout.toUpperCase() + "!!!";
+  // -> '"FEE FIGH FOE FUM!!!"'
+  // -> 'FEE FIGH FOE FUM!!!'
+  console.log(upperCaseString);
+  return upperCaseString; // ends the function
 }
+
 shouter('fee figh foe fum');
 
 
@@ -13,7 +16,7 @@ shouter('fee figh foe fum');
 
 function testShouter() {
   var whatToShout = 'fee figh foe fum';
-  var expected = 'FEE FIGH FOE FUM!!!';
+  var expected = 'FEE FIGH FOE FUM!!!'; //'FEE FIGH FOE FUM!!!';
   if (shouter(whatToShout) === expected) {
     console.log('SUCCESS: `shouter` is working');
   }
