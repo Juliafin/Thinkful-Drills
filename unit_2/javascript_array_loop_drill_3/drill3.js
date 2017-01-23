@@ -11,7 +11,7 @@ function fizzBuzz(countTo) {
     // division by 3 and 5 checked first, preventing conflict with division by 3 or by 5 activating first
 
 
-    if  (currentNumber % 3 === 0 && currentNumber % 5 === 0) {
+    if  (currentNumber % 3 === 0 && currentNumber % 5 === 0)  {
       console.log(`The current number, ${currentNumber} is divisible by both 3 and 5. "fizzbuzz" will be added to the array"`);
       arrayOfFizz.push("fizzbuzz");
     }
