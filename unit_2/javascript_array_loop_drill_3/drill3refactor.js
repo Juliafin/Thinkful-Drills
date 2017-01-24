@@ -8,8 +8,6 @@ function numberCounter(number) {
     return arrayOfNum
 }
 
-
-
  // tests for multiples of 3
 function multiplesOf3Fizz(array) {
   for (i=0; i < array.length; i++) {
@@ -21,10 +19,6 @@ function multiplesOf3Fizz(array) {
   }
   return array
 }
-
-numar= [1,2,3,4,5,6,7,8];
-multiplesOf3Fizz(numar)
-
 
   // tests for multiples of 5
 function multiplesOf5buzz(array) {
