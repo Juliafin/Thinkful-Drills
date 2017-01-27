@@ -1,16 +1,16 @@
 
 function firstFourItems(array) {
-  arrayFirstFour = array.slice(0,4);
+  var arrayFirstFour = array.slice(0,4);
   console.log(arrayFirstFour);
-  return(arrayFirstFour);
+  return arrayFirstFour;
 
 }
 
 
 function lastThreeItems(array) {
-  arrayLastThree = array.slice(-3);
+  var arrayLastThree = array.slice(-3);
   console.log(arrayLastThree);
-  return(arrayLastThree);
+  return arrayLastThree;
 }
 
 

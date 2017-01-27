@@ -1,9 +1,8 @@
 function addToList(list, item) {
-   list.push(item);
-   console.log(list);
-  return list;
+    list.push(item);
+    console.log(list);
+    return list;
 }
-
 
 
 
@@ -20,20 +19,20 @@ function addToList(list, item) {
 
 function testAddToList() {
 
-  var input1 = ["red", "blue", "green"]
-  var input2 = "pink"
-  var expected = ["red", "blue", "green", "pink"]
-  var result = addToList(input1, input2);
+    var input1 = ["red", "blue", "green"]
+    var input2 = "pink"
+    var expected = ["red", "blue", "green", "pink"]
+    var result = addToList(input1, input2);
 
-  if (
-    result && result.length && expected.length === result.length &&
-    expected.every(function(item) {
-      return result.indexOf(item) > -1;
-    })) {
-    console.log('SUCCESS: `addToList` works!');
-  } else {
-    console.error('FAILURE: `addToList` is not working');
-  }
+    if (
+        result && result.length && expected.length === result.length &&
+        expected.every(function(item) {
+            return result.indexOf(item) > -1;
+        })) {
+        console.log('SUCCESS: `addToList` works!');
+    } else {
+        console.error('FAILURE: `addToList` is not working');
+    }
 }
 
 testAddToList();

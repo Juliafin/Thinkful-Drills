@@ -2,6 +2,7 @@
 function minusLastItem(array) {
 
   var arrayLengthMinusLast = array.length - 1;
+  var end = array.length - 1;
   var arrayWithoutLast = array.slice(0, arrayLengthMinusLast);
   console.log(arrayWithoutLast);
   return (arrayWithoutLast)
@@ -9,23 +10,20 @@ function minusLastItem(array) {
 
 
 function copyFirstHalf(array) {
+  var outArray = [];
 
   if (array.length % 2 === 0) {
-    var evenArray = [];
     var arrayHalfLengthEven = array.length / 2;
     console.log(`The array length of ${arrayHalfLengthEven} is even.`);
-    evenArray = array.slice(0, arrayHalfLengthEven);
-    return evenArray;
-  }
-
-  else {
-    var oddArray = [];
-    var arrayHalfLengthOdd = ((array.length / 2) -.5);
+    outArray = array.slice(0, arrayHalfLengthEven);
+  } else {
+    var arrayHalfLengthOdd = ((array.length - 1) / 2);
+    // var arrayHalfLengthOdd = ((array.length / 2) -.5);
     console.log(`The array length of ${arrayHalfLengthOdd} is odd.`);
-    oddArray = array.slice(0, arrayHalfLengthOdd);
-    return oddArray;
+    outArray = array.slice(0, arrayHalfLengthOdd);
   }
 
+  return outArray;
 }
 
 testArray = [1,2,3,4,5,6,7];

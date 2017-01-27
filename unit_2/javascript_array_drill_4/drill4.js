@@ -1,11 +1,11 @@
 function findLength(array) {
   console.log("This array is " + array.length + " elements long");
-  return(array.length);
+  return array.length
 }
 
 function accessLastItem(array) {
   console.log("The last value of the array is" + array[array.length -1]);
-  return(array[array.length -1]);
+  return array[array.length -1];
 }
 
 
