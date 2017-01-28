@@ -1,13 +1,14 @@
-function max(obj) {
-  var keys = Object.keys(obj);
-  var startKey = keys[0];
-
-  var greaterThanKey = function(maxKey, newKey) {
-    return (obj[newKey] > obj[maxKey]) ? newKey : maxKey;
-  };
-
-  return keys.reduce(greaterThanKey, startKey);
-}
+// // altnerate solution!
+// function max(obj) {
+//   var keys = Object.keys(obj);
+//   var startKey = keys[0];
+//
+//   var greaterThanKey = function(maxKey, newKey) {
+//     return (obj[newKey] > obj[maxKey]) ? newKey : maxKey;
+//   };
+//
+//   return keys.reduce(greaterThanKey, startKey);
+// }
 
 function mostFrequentWord(words) {
   // creating the object for the words in the array to be pushed into
@@ -18,15 +19,16 @@ function mostFrequentWord(words) {
   // var result = [1, 2, 3].map(function(element) { return element + 1; });
   words.forEach(function(element/*, i, words*/) {
 
-    // if it doesn't, make the value equal to 1
-
-    //if (objWordCount.hasOwnProperty(element) === false) {
+    // if the key exists, add one to it's value
+    // alternate if statement #1 : if (objWordCount.hasOwnProperty(element) === false) {
     if (objWordCount.hasOwnProperty(element)) { // true => false, false => true
-    //if (typeof objWordCount[element] === "undefined" ) {
+    // alternative if statement #2 //if (typeof objWordCount[element] === "undefined" ) {
 
       objWordCount[element] += 1;
 
-    // if the key exists, add one to it's value
+
+    // if it doesn't, make the value equal to 1
+
 
     } else {
       //objWordCount[element] = objWordCount[element] + 1;
@@ -41,7 +43,7 @@ function mostFrequentWord(words) {
   var maxKey = keys[0]; // "and"
 
   keys.forEach(function(key) {
-    maxKey = (objWordCount[maxKey] < objWordCount[key]) ? key : maxkey;
+    maxKey = (objWordCount[maxKey] < objWordCount[key]) ? key : maxKey;
   }); // closes foreach
 
   // Loop 1
