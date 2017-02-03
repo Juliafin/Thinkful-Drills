@@ -25,9 +25,16 @@ function objectMerge(obj1, obj2) {
     });
 
     // returns the third object
-    console.log(obj3);
+    // console.log(obj3);
     return obj3;
 
+}
+// compares an incoming element (in an array of objects), comparing it to the other stream, returning the matching ids, otherwise returns -1 (meaning a match was not found)
+function findIndex(obj, objAry) {
+  for(var i=0; i<objAry.length; i++) {
+    if(obj.id === objAry[i].id) return i;
+  }
+  return -1;
 }
 
 function mergeDataStreams(stream1, stream2) {
@@ -36,25 +43,36 @@ function mergeDataStreams(stream1, stream2) {
   var mergedObj, merged = [];
   // stream1.slice();
 
-  console.log(merged);
-
   // nested for loops to compare every combination of elements
-  stream1.forEach(function(element1) {
-    stream2.forEach(function(element2) {
-      if (element1.id === element2.id) {
-         mergedObj = objectMerge(stream1Ele, stream2Ele);
-         //console.log(mergedObj);
-         merged.push(mergedObj);
-      } else {
-        merged.push(element1);
-        merged.push(element2);
-      }
+  stream1.forEach(function(item) {
+    var index = findIndex(item, stream2); //checks whether the current element (of stream1) iterated matches against elements in stream 2 and assigns to index
 
-    })
-  })
-  console.log(merged);
+    if(index === -1) { // not found
+      merged.push(item); //the current element from stream1 is pushed to merged
+    } else { // found
+      mergedObj = objectMerge(item, stream2[index]); //intermediate object to grab merging both elements
+      merged.push(mergedObj); //push the merged elements 1 and 2 into merged (via mergedObj)
+    }
+  });
+
+  stream2.forEach(function(item2) {
+    var index = findIndex(item2, stream1); //checks whether the current element (of stream2) iterated matches against elements in stream 1 and assigns to index
+    if(index === -1) { // not found
+      merged.push(item2);
+    }
+  });
+
   return merged;
 }
+
+// Merging two arrays of objects
+// when they don't match just add
+// Approach #1:
+//    for each item in the first array
+//      determine if the object exists in the 2nd array
+//      if so, we merge
+//      if not, we add
+//    add all items from 2nd array that weren't merged
 
 
 // data
@@ -163,4 +181,4 @@ function testMergeDataStreams(stream1, stream2) {
   }
 }
 
-testMergeDataStreams(dataSource1, dataSource2);
+// testMergeDataStreams(dataSource1, dataSource2);
