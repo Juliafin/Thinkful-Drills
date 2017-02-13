@@ -17,7 +17,7 @@ var shoppingListState = {
 
   // Iterates through the shopping list array and adds the elements to the DOM
   shoppingListCreateAndDisplay: function() {
-   this.items.map(function(item){
+   this.items.forEach(function(item){
       var shoppingListElement = (`
         <li>
           <span class="shopping-item">${item}</span>
@@ -29,13 +29,9 @@ var shoppingListState = {
               <span class ="button-label">delete</span>
             </button>
           </div>
-        </li>`)
+        </li>`);
 
-      if (item === "") {
-        return
-      } else {
-        $('.shopping-list').append(shoppingListElement);
-      };
+      if(item !== "") $('.shopping-list').append(shoppingListElement);
     }); // closes map function
   }, // closes shoppingListCreateAndDisplay
 
