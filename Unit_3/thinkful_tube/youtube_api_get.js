@@ -5,7 +5,7 @@ var youtubeData = {
   q: ''
 };
 var OMDB_BASE_URL = "https://www.googleapis.com/youtube/v3/search"
-function getDataFromYoutubeApi(searchTerm, callback) {
+function getDataFromYoutubeApi(searchTerm, callback, pagetoken) {
 
   var youtubeSendSetting = {
     url: OMDB_BASE_URL,
@@ -14,7 +14,8 @@ function getDataFromYoutubeApi(searchTerm, callback) {
       part: 'snippet',
       key: 'AIzaSyCpcsrpsW5YrXga0kp0tg241mPPwhsxwvA',
       r: 'json',
-      maxResults: 25
+      maxResults: 25,
+      pageToken: pagetoken
 
     },
     dataType: 'json',
@@ -29,7 +30,12 @@ function saveData(data) {
 
   console.log(data);
   console.log(data.items);
+  console.log(data.nextPageToken);
+  youtubeData.nextPageToken = data.nextPageToken;
+  youtubeData.prevPageToken = data.prevPageToken;
   renderAndDisplaySearchResults(data.items);
+  nextButtonListen();
+  prevButtonListen();
 
 
 }
@@ -39,12 +45,8 @@ function formSubmit() {
   $('#form').submit(function(event){
 
     event.preventDefault();
-    var formquery = $('input.searchfield').val()
-    youtubeData.q = formquery
-
+    youtubeData.q = $('input.searchfield').val()
     getDataFromYoutubeApi(youtubeData.q, saveData);
-    // console.log(youtubeData["items"]);
-    // createHtml(youtubeData.data.items);
 
 });
 
@@ -53,15 +55,15 @@ function formSubmit() {
 function renderAndDisplaySearchResults(array) {
   var htmlOut = '<div class="row">';
   array.forEach(function(element, index) {
-  console.log(element.id.videoId)
+  // console.log(element.id.videoId)
   var url = "https://www.youtube.com/watch?v=" + element.id.videoId;
-  console.log("This the url: " + url);
+  // console.log("This the url: " + url);
   var title = element.snippet.title;
-  console.log("Titles: " + title);
+  // console.log("Titles: " + title);
   var description = element.snippet.description;
-  console.log("This is the description: " + description);
+  // console.log("This is the description: " + description);
   var imgUrl = element.snippet.thumbnails.medium.url;
-  console.log("These are the image urls: " + imgUrl);
+  // console.log("These are the image urls: " + imgUrl);
   var innerDivs = (`
   <div class="col-4">
       <div class="box imagestyle">
@@ -82,14 +84,34 @@ function renderAndDisplaySearchResults(array) {
 }) // closes foreach
 
   htmlOut += "</div>";
-  console.log(htmlOut);
+  // console.log(htmlOut);
   $('.js-searchresults').html(htmlOut)
+  var nextButton = (`<label for="nextbutton"></label>
+  <button name="nextbutton" class= "nextbutton" id="nextbutton">Next 25 Results</button>`)
+
+  var prevButton = (`<label for="previousbutton"></label>
+  <button name="previousbutton" class= "previousbutton" id="previousbutton">Previous 25 Results</button>`)
+
+  // console.log($('#nextButton').length)
+  $('.extrabuttons').empty();
+  $('.extrabuttons').append(nextButton);
+  $('.extrabuttons').append(prevButton);
+
 
 } // closes function
 
 $(function(){formSubmit();});
-// console.log(youtubeData);
 
 
 
-// function renderHtml(){}
+function nextButtonListen(){
+  $('#nextbutton').click(function(event){
+    getDataFromYoutubeApi(youtubeData.q, saveData, youtubeData.nextPageToken);
+  })
+}
+
+function prevButtonListen(){
+  $('#prevbutton').click(function(event){
+    getDataFromYoutubeApi(youtubeData.q, saveData, youtubeData.prevPageToken);
+  })
+}
