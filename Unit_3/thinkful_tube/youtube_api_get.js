@@ -2,7 +2,9 @@
 // Testing api data
 /*                                                      https://www.googleapis.com/youtube/v3/search/?q=indiana%20jones&part=snippet&key=AIzaSyCpcsrpsW5YrXga0kp0tg241mPPwhsxwvA&r=json/ */
 var youtubeData = {
-  q: ''
+  q: '',
+  nextPageToken: '',
+  prevPageToken: ''
 };
 var OMDB_BASE_URL = "https://www.googleapis.com/youtube/v3/search"
 function getDataFromYoutubeApi(searchTerm, callback, pagetoken) {
@@ -28,14 +30,14 @@ function getDataFromYoutubeApi(searchTerm, callback, pagetoken) {
 
 function saveData(data) {
 
-  console.log(data);
-  console.log(data.items);
-  console.log(data.nextPageToken);
+  // console.log(data);
+  // console.log(data.items);
   youtubeData.nextPageToken = data.nextPageToken;
   youtubeData.prevPageToken = data.prevPageToken;
+  console.log("Next: " + data.nextPageToken);
+  console.log("Previous: " + data.prevPageToken);
   renderAndDisplaySearchResults(data.items);
-  nextButtonListen();
-  prevButtonListen();
+
 
 
 }
@@ -75,7 +77,7 @@ function renderAndDisplaySearchResults(array) {
           </div>
       </div>
   </div>
-  `)
+  `);
   if ( (index + 1) % 3 === 0 ) {
     innerDivs += '</div><div class="row">'
   } // closes if statement
@@ -90,13 +92,19 @@ function renderAndDisplaySearchResults(array) {
   <button name="nextbutton" class= "nextbutton" id="nextbutton">Next 25 Results</button>`)
 
   var prevButton = (`<label for="previousbutton"></label>
-  <button name="previousbutton" class= "previousbutton" id="previousbutton">Previous 25 Results</button>`)
+  <button name="previousbutton" class= "previousbutton hidden" id="previousbutton">Previous 25 Results</button>`)
 
   // console.log($('#nextButton').length)
   $('.extrabuttons').empty();
-  $('.extrabuttons').append(nextButton);
   $('.extrabuttons').append(prevButton);
+  $('.extrabuttons').append(nextButton);
 
+
+  nextButtonListen();
+  prevButtonListen();
+  if (youtubeData.prevPageToken.length !== 0) {
+    $('#previousbutton').removeClass('hidden');
+  }
 
 } // closes function
 
@@ -107,11 +115,14 @@ $(function(){formSubmit();});
 function nextButtonListen(){
   $('#nextbutton').click(function(event){
     getDataFromYoutubeApi(youtubeData.q, saveData, youtubeData.nextPageToken);
+    console.log("Next button key inside the listener" + youtubeData.nextPageToken);
+    console.log("Previous button key inside the listener" + youtubeData.prevPageToken);
   })
 }
 
 function prevButtonListen(){
-  $('#prevbutton').click(function(event){
+  $('#previousbutton').click(function(event){
     getDataFromYoutubeApi(youtubeData.q, saveData, youtubeData.prevPageToken);
+    console.log("Previous button key inside the listener" + youtubeData.prevPageToken);
   })
 }

@@ -17,6 +17,7 @@ h1 {
     border-right-color: green;
     border-left-color: yellow;
     border-radius: 23px;
+    font-size: 33px;
 }
 
 div.formcontainer {
@@ -31,18 +32,18 @@ div.formcontainer {
 }
 
 .box.imagestyle {
-  border: 3px solid;
-  text-align: center;
-  border-bottom-color: red;
-  border-top-color: blue;
-  border-right-color: green;
-  border-left-color: yellow;
-  border-radius: 10px;
-  padding-top: 15px;
-  min-height: 369px;
-  height: auto;
-  width: 295px;
-  margin-bottom: 40px;
+    border: 3px solid;
+    text-align: center;
+    border-bottom-color: red;
+    border-top-color: blue;
+    border-right-color: green;
+    border-left-color: yellow;
+    border-radius: 10px;
+    padding-top: 15px;
+    min-height: 369px;
+    height: auto;
+    width: 295px;
+    margin-bottom: 40px;
 }
 
 img {
@@ -50,9 +51,9 @@ img {
 }
 
 h2 {
-  word-break: break-word;
-  padding-left: 5px;
-  padding-right: 5px;
+    word-break: break-word;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 input#search {
@@ -68,4 +69,28 @@ button#button {
     height: 26px;
     border-radius: 10px;
     font-weight: bolder;
+}
+
+.hidden {
+    display: none;
+}
+
+.extrabuttons {
+    text-align: center;
+}
+
+button#nextbutton {
+    outline: none;
+    margin-left: 11px;
+    margin-top: 8px;
+    background-color: #b4f1ba;
+    border-radius: 5px;
+}
+
+button#previousbutton {
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffff96;
+    border-radius: 5px;
 }
