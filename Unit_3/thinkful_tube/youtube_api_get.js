@@ -16,8 +16,9 @@ function getDataFromYoutubeApi(searchTerm, callback, pagetoken) {
       part: 'snippet',
       key: 'AIzaSyCpcsrpsW5YrXga0kp0tg241mPPwhsxwvA',
       r: 'json',
-      maxResults: 25,
-      pageToken: pagetoken
+      maxResults: 27,
+      pageToken: pagetoken,
+      type: 'video'
 
     },
     dataType: 'json',
@@ -31,7 +32,7 @@ function getDataFromYoutubeApi(searchTerm, callback, pagetoken) {
 function saveData(data) {
 
   // console.log(data);
-  // console.log(data.items);
+  console.log(data.items);
   youtubeData.nextPageToken = data.nextPageToken;
   youtubeData.prevPageToken = data.prevPageToken;
   console.log("Next: " + data.nextPageToken);

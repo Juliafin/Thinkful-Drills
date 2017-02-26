@@ -7,6 +7,27 @@ body {
     background-color: #f3fff4;
 }
 
+
+.extrabuttons {
+    text-align: center;
+}
+
+.nextbutton {
+    outline: none;
+    margin-left: 11px;
+    margin-top: 8px;
+    background-color: #b4f1ba;
+    border-radius: 5px;
+}
+
+.previousbutton {
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffff96;
+    border-radius: 5px;
+}
+
 h1 {
     text-align: center;
     font-weight: bold;
@@ -73,24 +94,4 @@ button#button {
 
 .hidden {
     display: none;
-}
-
-.extrabuttons {
-    text-align: center;
-}
-
-button#nextbutton {
-    outline: none;
-    margin-left: 11px;
-    margin-top: 8px;
-    background-color: #b4f1ba;
-    border-radius: 5px;
-}
-
-button#previousbutton {
-    outline: none;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffff96;
-    border-radius: 5px;
 }
