@@ -80,7 +80,7 @@ function renderAndDisplaySearchResults(array) {
   </div>
   `);
   if ( (index + 1) % 3 === 0 ) {
-    innerDivs += '</div><div class="row">'
+    innerDivs += '</div>'
   } // closes if statement
   htmlOut += innerDivs;
 
