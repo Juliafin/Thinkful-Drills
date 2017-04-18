@@ -6,11 +6,11 @@ var youtubeData = {
   nextPageToken: '',
   prevPageToken: ''
 };
-var OMDB_BASE_URL = "https://www.googleapis.com/youtube/v3/search"
+var YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3/search"
 function getDataFromYoutubeApi(searchTerm, callback, pagetoken) {
 
   var youtubeSendSetting = {
-    url: OMDB_BASE_URL,
+    url: YOUTUBE_BASE_URL,
     data: {
       q: youtubeData.q,
       part: 'snippet',
@@ -79,9 +79,9 @@ function renderAndDisplaySearchResults(array) {
       </div>
   </div>
   `);
-  if ( (index + 1) % 3 === 0 ) {
-    innerDivs += '</div>'
-  } // closes if statement
+  // if ( (index + 1) % 3 === 0 ) {
+  //   innerDivs += '</div>'
+  // } // closes if statement
   htmlOut += innerDivs;
 
 }) // closes foreach
